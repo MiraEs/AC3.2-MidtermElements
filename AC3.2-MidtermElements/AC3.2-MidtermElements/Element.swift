@@ -11,6 +11,7 @@ import Foundation
 internal enum jsonError: Error {
     case jsonData(json: Any)
 }
+
 internal enum Parsing: Error {
     case elementProperties(dict: [String:AnyObject])
     
@@ -50,7 +51,6 @@ class Element {
                     let boilingPoint = dict["boiling_c"] as? Int else {
                         throw Parsing.elementProperties(dict: dict)
                 }
-
                 
                 let elementProperties = Element(number: number, weight: weight, name: name, symbol: symbol, meltingPoint: meltingPoint, boilingPoint: boilingPoint)
                 elements.append(elementProperties)
@@ -64,5 +64,4 @@ class Element {
         }
         return elements
     }
- 
 }

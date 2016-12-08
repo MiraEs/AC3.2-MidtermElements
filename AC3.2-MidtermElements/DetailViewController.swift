@@ -18,6 +18,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var detailName: UILabel!
     @IBOutlet weak var detailWeight: UILabel!
+    @IBOutlet weak var detailBackgroundImg: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,15 +44,14 @@ class DetailViewController: UIViewController {
             if let validImageData = data {
                 DispatchQueue.main.async {
                     self.detailImage.image = UIImage(data: validImageData)
+                    self.detailBackgroundImg.image = UIImage(data: validImageData)
                     self.view.setNeedsLayout()
                 }
             }
         }
     }
+    
     @IBAction func favoriteElement(_ sender: UIBarButtonItem) {
         api.postRequest(endPoint: postEndpoint, data: postData)
     }
-    
-    
-    
 }

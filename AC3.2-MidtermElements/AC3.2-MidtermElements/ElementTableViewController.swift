@@ -42,7 +42,6 @@ class ElementTableViewController: UITableViewController {
         return elements.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "elementCell", for: indexPath)
         let currentCell = elements[indexPath.row]
@@ -60,10 +59,8 @@ class ElementTableViewController: UITableViewController {
                 }
             }
         }
-        
         return cell
     }
-    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dvc = segue.destination as? DetailViewController,
@@ -72,7 +69,6 @@ class ElementTableViewController: UITableViewController {
             dvc.elementDetails = elements[indexpath.row]
         }
     }
-    
 }
 
 

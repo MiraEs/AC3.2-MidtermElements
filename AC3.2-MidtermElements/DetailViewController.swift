@@ -20,14 +20,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailWeight: UILabel!
     @IBOutlet weak var detailBackgroundImg: UIImageView!
     
+    @IBOutlet weak var detailMelting: UILabel!
+    
+    @IBOutlet weak var detailBoiling: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getFullImage(symbol: (self.elementDetails?.symbol)!)
         self.title = elementDetails.name
-        detailNum?.text = String(self.elementDetails.number)
-        detailName?.text = self.elementDetails.name
-        detailWeight?.text = String(self.elementDetails.weight)
+        getFullImage(symbol: (self.elementDetails?.symbol)!)
+        loadDataDetails()
         
         //Post data
         self.postData = [
@@ -48,6 +50,14 @@ class DetailViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func loadDataDetails() {
+        detailNum?.text = String(self.elementDetails.number)
+        detailName?.text = self.elementDetails.name
+        detailWeight?.text = String(self.elementDetails.weight)
+        detailMelting?.text = String("Melting Point: \(self.elementDetails.meltingPoint) c")
+        detailBoiling?.text = String("Melting Point: \(self.elementDetails.boilingPoint) c")
     }
     
     @IBAction func favoriteElement(_ sender: UIBarButtonItem) {

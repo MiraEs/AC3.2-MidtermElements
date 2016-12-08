@@ -44,7 +44,7 @@ class DetailViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.detailImage.image = UIImage(data: validImageData)
                     self.detailBackgroundImg.image = UIImage(data: validImageData)
-                    self.view.setNeedsLayout()
+                    self.view.reloadInputViews()
                 }
             }
         }

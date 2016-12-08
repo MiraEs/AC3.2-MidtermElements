@@ -116,7 +116,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="SM1-bh-Zan">
-                        <barButtonItem key="rightBarButtonItem" title="&lt;3" id="aMw-hI-9N0">
+                        <barButtonItem key="rightBarButtonItem" title="💖" id="aMw-hI-9N0">
                             <color key="tintColor" red="0.93894165754318237" green="0.037244163453578949" blue="0.85257846117019653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="favoriteElement:" destination="N03-hp-7GP" id="zbM-Zu-bae"/>

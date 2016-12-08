@@ -22,6 +22,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         getFullImage(symbol: (self.elementDetails?.symbol)!)
         self.title = elementDetails.name
         detailNum?.text = String(self.elementDetails.number)
@@ -33,8 +34,6 @@ class DetailViewController: UIViewController {
             "my_name": "Mira",
             "favorite_element": self.elementDetails.name
         ]
-        
-        
     }
     
     //DELAYED HERE..

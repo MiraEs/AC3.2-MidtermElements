@@ -57,7 +57,7 @@ class DetailViewController: UIViewController {
         detailName?.text = self.elementDetails.name
         detailWeight?.text = String(self.elementDetails.weight)
         detailMelting?.text = String("Melting Point: \(self.elementDetails.meltingPoint) c")
-        detailBoiling?.text = String("Melting Point: \(self.elementDetails.boilingPoint) c")
+        detailBoiling?.text = String("Boiling Point: \(self.elementDetails.boilingPoint) c")
     }
     
     @IBAction func favoriteElement(_ sender: UIBarButtonItem) {

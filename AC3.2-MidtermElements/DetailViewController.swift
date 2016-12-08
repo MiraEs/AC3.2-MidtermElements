@@ -19,9 +19,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailName: UILabel!
     @IBOutlet weak var detailWeight: UILabel!
     @IBOutlet weak var detailBackgroundImg: UIImageView!
-    
     @IBOutlet weak var detailMelting: UILabel!
-    
     @IBOutlet weak var detailBoiling: UILabel!
     
     override func viewDidLoad() {
